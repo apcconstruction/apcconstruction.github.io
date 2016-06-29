@@ -1,3 +1,16 @@
 input[type=text], textarea
+  display: block
+  width: 100%
   background-color: $white
   appearance: none
+  -webkit-appearance: none
+  border: none
+  font-size: 16px
+  line-height: 16px
+  padding: (50px - 16px) / 2
+  color: $quarter-gray
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+  margin: 10px 0
+  &:focus
+    box-shadow: 0 0 15px rgba(0,0,0,0.1)
+    outline: none

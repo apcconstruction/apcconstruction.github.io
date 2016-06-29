@@ -65,4 +65,17 @@ $(document).ready(() => {
   }
   setHeights()
   $(window).resize(() => setHeights())
+
+  // menu toggle
+  const animation = 'rubberBand'
+  $('.menu-toggle').click(function () {
+    $(this).addClass('animated').addClass(animation)
+    $('body').toggleClass('menu-open')
+    const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+    $(this).one(events, () => {
+      $(this).removeClass('animated').removeClass(animation)
+    });
+  })
+  
+
 })

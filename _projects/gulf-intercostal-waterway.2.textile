@@ -1,5 +1,5 @@
 ---
 name: Gulf International Waterway
 teaser: This is the teaser
-image: workers-4.jpg
+image: Dupont 02.jpg
 ---

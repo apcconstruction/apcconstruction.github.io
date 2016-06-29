@@ -11,8 +11,7 @@ section#header
   left: 0
   z-index: 100
   width: 100%
-  transition: background-color 1s
-  .scrolled &
+  .scrolled &, .menu-open &
     background-color: rgba($black, 0.9)
 
   .container
@@ -21,57 +20,86 @@ section#header
     padding: 30px 20px
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     transition: padding .5s
     .scrolled &
       padding: 10px 20px
 
-    svg
+    a.logo svg
       transition: width .5s, height .5s
       width: 100px
       height: 100px
       .scrolled &
         width: 50px
         height: 50px
+    
+
+    .menu-toggle
+      display: none
 
     ul
-      display: flex
       list-style: none
+      padding: 0
       transition: margin .5s
-      .scrolled &
-        margin: 0
       li
-        margin: auto
-        margin-left: 20px
-        display: flex
-        justify-content: space-around
         a
           display: block
           color: #fff
-          font-size: 14px
           text-decoration: none
           text-transform: uppercase
-        &:not(.last) a
-          position: relative
-          &:after
-            content: ' '
-            width: 0
-            background-color: #EB6B24
-            position: absolute
-            height: 2px
-            bottom: -5px
-            left: 0
-            transition: width 0.2s
-          &:hover:after
-            width: 100%
-        &.last a
-          border: 2px solid $white
-          padding: 10px 20px
-          transition: border-color 0.2s, color 0.2s, background-color 0.2s
-          &:hover
-            border-color: $orange
-            background-color: rgba($black, 0.5)
-            color: $orange
 
+    +mobile
+      .menu-toggle
+        margin-top: 17px
+        display: block
+        animation-duration: 0.6s
+
+      ul
+        width: 100%
+        display: none
+        margin-top: 50px
+        .menu-open &
+          display: block
+        li
+          border-top: 1px solid lighten($black, 20%)
+          a
+            text-align: center
+            padding: 10px
+
+        
+    +gte-tablet
+      ul
+        display: flex
+        .scrolled &
+          margin: 0
+        li
+          margin: auto
+          margin-left: 20px
+          display: flex
+          justify-content: space-around
+          a
+            font-size: 14px
+          &:not(.last) a
+            position: relative
+            &:after
+              content: ' '
+              width: 0
+              background-color: #EB6B24
+              position: absolute
+              height: 2px
+              bottom: -5px
+              left: 0
+              transition: width 0.2s
+            &:hover:after
+              width: 100%
+          &.last a
+            border: 2px solid $white
+            padding: 10px 20px
+            transition: border-color 0.2s, color 0.2s, background-color 0.2s
+            &:hover
+              border-color: $orange
+              background-color: rgba($black, 0.5)
+              color: $orange
 
 section#hero
   position: relative
@@ -86,6 +114,7 @@ section#hero
     height: 100%
     background-color: rgba($black, 0.4)
     z-index: 0
+    object-fit: cover
 
   .content-container
     position: absolute
@@ -96,7 +125,7 @@ section#hero
     padding: 40px 20px
     display: flex
     flex-direction: column
-
+    background-color: rgba($black, 0.6)
     .content
       display: flex
       flex-direction: column
@@ -134,13 +163,14 @@ section#hero
 
 
 section#services
-  display: flex
+  +gte-desktop
+    display: flex
   padding: 100px 0px
   max-width: 1150px
   margin: auto
   .service
     text-align: center
-    margin: 0 20px
+    margin: 50px
     h3
       font-size: 16px
       text-transform: uppercase
@@ -153,12 +183,11 @@ section#services
 
 
 section#projects
-  +n-columns(300px,  2px, true, 5)
+  +n-columns(300px,  2px, false, 5)
 
   .item
     position: relative
     overflow: hidden
-
   .content
     position: relative
     z-index: 2
@@ -176,6 +205,7 @@ section#projects
 
   .background
     background-size: cover
+    background-position: center
     position: absolute
     top: 0
     left: 0
@@ -220,4 +250,37 @@ section#projects
 
 section#contact-form
   background-color: $light-gray
-  
+  padding: 80px 0
+  .container
+    margin: 0 20px
+  button
+    +button
+    margin-left: auto
+  form
+    max-width: 600px
+    margin: auto
+    display: flex
+    flex-direction: column
+  h3
+    +wide-heading
+
+
+section#footer
+  background-color: $dark-gray
+  color: $light-gray
+  font-size: 16px
+  line-height: 24px
+  .container
+    display: flex
+    flex-wrap: wrap
+    padding: 100px 0px
+    max-width: 1150px
+    margin: auto
+  .col
+    margin: 20px
+  a
+    color: $quarter-gray
+    text-decoration: none
+    transition: color 0.2s
+    &:hover
+      color: $white
