@@ -1,0 +1,10 @@
+<section id="services">
+  {% for service in site.services %}
+    <div class="service">
+      <img src="/assets/icons/{{ service.icon }}.svg">
+      <h3>{{ service.name }}</h3>
+      <p>{{ service.teaser }}</p>
+      <a href="/service/{{ service.slug }}">Read More</a>
+    </div>
+  {% endfor %}
+</section>

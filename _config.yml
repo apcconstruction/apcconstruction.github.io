@@ -1,0 +1,32 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: APC Construction
+email: info@apcconstruction.com
+description: > # Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+  Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+  ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla 
+  sed consectetur. Nulla vitae elit libero, a pharetra augue. Nullam id 
+  dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus 
+  magna, vel scelerisque nisl consectetur et.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://www.apcconstruction.com" # the base hostname & protocol for your site
+github_username:  brianberlin
+
+# Build settings
+markdown: kramdown
+
+collections:
+  projects:
+    output: true
+  services:
+    output: true
+
+sass:
+  sass_dir: _sass/
+  style: :compressed

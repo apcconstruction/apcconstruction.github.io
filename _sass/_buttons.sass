@@ -1,0 +1,22 @@
+=button($type: '')
+  background-color: $orange
+  font-size: 20px
+  font-weight: bold
+  color: $white
+  text-decoration: none
+  text-transform: uppercase
+  padding: 20px 40px
+  border: 2px solid $orange
+  display: inline-block
+  transition: background-color 0.2s, color 0.2s, border 0.2s
+  &:hover
+    background-color: $white
+    color: $orange
+    border: 2px solid $white
+  @if $type == 'ghost'
+    background-color: transparent
+    border: 2px solid $white
+    &:hover
+      background-color: transparent
+      color: $orange
+      border: 2px solid $orange

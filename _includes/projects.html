@@ -1,0 +1,13 @@
+<section id="projects" class="items">
+  {% for project in site.projects %}
+    <a href="/project/{{ project.slug }}" class="project item">
+      <div class="background" style="background-image: url('/assets/project-images/{{ project.image }}')"></div>
+      <div class="content">
+        <h3>{{ project.name }}</h3>
+        <i></i>
+        <p>{{ project.teaser }}</p>
+        {% include circle-plus.svg %}
+      </div>
+    </a>
+  {% endfor %}
+</section>
