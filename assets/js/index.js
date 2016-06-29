@@ -1,8 +1,10 @@
-const {$} = window
+var $ = window.$
 
-$(document).ready(() => {
+$(document).ready(function () {
   // adds scrolled class
-  const topClass = () => {
+  var windowWidth = $(window).width()
+
+  var topClass = function () {
     if ($(document).scrollTop() > 10) {
       $('body').addClass('scrolled')
     } else {
@@ -15,15 +17,18 @@ $(document).ready(() => {
   if ($('section#hero').length) {
     // sets height of hero image
     $('section#hero').height(window.innerHeight)
-    $(window).resize(() => {
-      $('section#hero').height(window.innerHeight)
+    $(window).resize(function () {
+      if ($(window).width() != windowWidth) {
+        windowWidth = $(window).width();
+        $('section#hero').height(window.innerHeight)
+      }
     })
 
     // hero animations
     $('section#hero h1, section#hero p, section#hero .buttons').css({ opacity: 0 })
     $('section#hero h1').addClass('animated').addClass('fadeInUp')
-    setTimeout(() => $('section#hero p').addClass('animated').addClass('fadeInUp'), 500)
-    setTimeout(() => $('section#hero .buttons').addClass('animated').addClass('fadeInUp'), 1000)
+    setTimeout(function () { $('section#hero p').addClass('animated').addClass('fadeInUp') }, 500)
+    setTimeout(function () { $('section#hero .buttons').addClass('animated').addClass('fadeInUp') }, 1000)
 
     // arrow click scroll
     $('section#hero .arrow').click(function () {
@@ -33,7 +38,7 @@ $(document).ready(() => {
   
   // setup parallax
   $('[data-parallax]').each(function () {
-    const path = $(this).attr('data-parallax')
+    var path = $(this).attr('data-parallax')
     $(this).parallax({ imageSrc: path })
   })
 
@@ -46,7 +51,7 @@ $(document).ready(() => {
   })
 
   // equal heights for service teasers
-  const setHeights = () => {
+  var setHeights = function () {
     var heights = { h3: 0, p: 0, img: 0 }
     $('section#services h3').height('inherit')
     $('section#services p').height('inherit')
@@ -64,18 +69,28 @@ $(document).ready(() => {
     $('section#services img').height(heights.img)
   }
   setHeights()
-  $(window).resize(() => setHeights())
+  $(window).resize(function () { 
+    if ($(window).width() != windowWidth) {
+      windowWidth = $(window).width();
+      setHeights()
+    } 
+  })
 
   // menu toggle
-  const animation = 'rubberBand'
+  var animation = 'rubberBand'
   $('.menu-toggle').click(function () {
     $(this).addClass('animated').addClass(animation)
     $('body').toggleClass('menu-open')
-    const events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
-    $(this).one(events, () => {
+    var events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+    $(this).one(events, function () {
       $(this).removeClass('animated').removeClass(animation)
     });
   })
   
+  // scoll to top
+  $('#scroll-to-top').click(function () {
+    $('html, body').animate({ scrollTop: 0 }, 1000)
+  })
+
 
 })
