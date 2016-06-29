@@ -1,0 +1,19 @@
+{
+  "name": "apcconstruction.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "git add .; git commit -m '...'; git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apcconstruction/apcconstruction.github.io.git"
+  },
+  "author": "Brian Berlin <bri@nberl.in>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apcconstruction/apcconstruction.github.io/issues"
+  },
+  "homepage": "https://github.com/apcconstruction/apcconstruction.github.io#readme"
+}
