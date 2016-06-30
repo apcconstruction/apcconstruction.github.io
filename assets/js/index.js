@@ -35,7 +35,7 @@ $(document).ready(function () {
       $('html, body').animate({ scrollTop: $('#services').offset().top - 70 }, 1000)
     })
   }
-  
+
   // setup parallax
   $('[data-parallax]').each(function () {
     var path = $(this).attr('data-parallax')
