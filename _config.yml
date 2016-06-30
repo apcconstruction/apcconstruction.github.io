@@ -15,7 +15,7 @@ description: > # Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   dolor id nibh ultricies vehicula ut id elit. Praesent commodo cursus 
   magna, vel scelerisque nisl consectetur et.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.apcconstruction.com" # the base hostname & protocol for your site
+url: "https://apcconstruction.github.io" # the base hostname & protocol for your site
 github_username:  brianberlin
 
 # Build settings

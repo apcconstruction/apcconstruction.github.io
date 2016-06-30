@@ -1,10 +1,13 @@
 <section id="contact" class="contact">
   <div class="container">
     <h3>Contact Form</h3>
-    <form action="">
+    <form action="https://formspree.io/bri@nberl.in" method="POST">
       <input type="text" placeholder="Name" name="name">
-      <input type="text" placeholder="Email" name="email">
-      <input type="text" placeholder="Telephone" name="telephone">
+      <input type="email" placeholder="Email" name="_replyto">
+      <input type="tel" placeholder="Telephone" name="telephone">
+      <input type="hidden" name="_next" value="{{ site.url }}/thank-you.html" />
+      <input type="hidden" name="_subject" value="Website Contact Form" />
+      <input type="text" name="_gotcha" style="display:none" />
       <textarea name="message" cols="30" rows="10"></textarea>
       <button type="submit">Contact Us</button>
     </form>
