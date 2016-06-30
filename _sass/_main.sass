@@ -139,7 +139,7 @@ section.hero
     min-height: 600px
     img.background
       display: none
-
+  overflow: hidden
       
   .background
     content: ' '
@@ -152,6 +152,7 @@ section.hero
     z-index: 0
     object-fit: cover
     overflow: hidden
+    -webkit-filter: blur(5px)
 
   .content-container
     position: absolute
@@ -267,9 +268,15 @@ section.projects
     .item
       position: relative
       overflow: hidden
-      display: none
+      transition: -webkit-filter 0.5s, -moz-filter 0.5s, -ms-filter 0.5s
+      -webkit-filter: brightness(0.3) grayscale(100%)
+      -moz-filter: brightness(0.3) grayscale(100%)
+      -ms-filter: brightness(0.3) grayscale(100%)
       &.show
-        display: block
+        -webkit-filter: brightness(1)
+        -moz-filter:  brightness(1)
+        -ms-filter:  brightness(1)
+        
 
     .content
       position: relative
@@ -303,6 +310,24 @@ section.projects
         width: 100%
         height: 100%
         z-index: 2
+      .image
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        overflow: hidden
+        img
+          position: absolute
+          left: -9999px
+          right: -9999px
+          top: -9999px
+          bottom: -9999px
+          margin: auto
+          min-width: 100%
+          min-height: 100%
+
+
 
     a.item
       background-color: $black

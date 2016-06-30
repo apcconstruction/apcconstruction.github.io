@@ -18,7 +18,9 @@
     {% endif %}
     {% for project in projects %}
       <a href="{{ project.url }}" class="project item" data-service="{{ project.service }}">
-        <div class="background" style="background-image: url('{{ project.image }}')"></div>
+        <div class="background">
+          <div class="image"><img src="{{ project.image }}" data-src="{{ project.image }}" /></div>
+        </div>
         <div class="content">
           <h3>{{ project.name }}</h3>
           <i></i>
@@ -33,6 +35,9 @@
 
 <script type="text/javascript">
   var projects = function () {
+
+    $('section.projects .items img').unveil()
+
     // add and remove project animation classes
     $('section.projects svg').addClass('animated').addClass('rotateOut')
     $('section.projects a').hover(function () {
