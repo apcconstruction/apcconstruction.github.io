@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% include page-title.html heading=page.name subheading=page.subheading image=page.image %}
+
+<section class="secondary-page">
+
+  <div class="content">
+    {{ page.content }}
+  </div>
+
+</section>
+
+{% assign slug = page.name | slugify %}
+{% include projects.html service=slug  %}

@@ -1,15 +1,22 @@
 <section id="projects" class="projects">
   <div style="height: 71px"></div>
-  <div class="filter">
-    <div class="container">
-      <a data-filter="all">All</a>
-      {% for service in site.services %}
-        <a data-filter="{{ service.name | slugify }}">{{ service.name }}</a>
-      {% endfor %}
+  {% if include.service == null %}
+    <div class="filter">
+      <div class="container">
+        <a data-filter="all">All</a>
+        {% for service in site.services %}
+          <a data-filter="{{ service.name | slugify }}">{{ service.name }}</a>
+        {% endfor %}
+      </div>
     </div>
-  </div>
+  {% endif %}
   <div class="items">
-    {% for project in site.projects %}
+    {% if include.service != null %}
+      {% assign projects = site.projects | where: 'service', include.service  %}
+    {% else %}
+      {% assign projects = site.projects %}
+    {% endif %}
+    {% for project in projects %}
       <a href="{{ project.url }}" class="project item" data-service="{{ project.service }}">
         <div class="background" style="background-image: url('{{ project.image }}')"></div>
         <div class="content">
