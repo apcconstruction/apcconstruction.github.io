@@ -2,8 +2,7 @@
 name: Gulf International Waterway
 teaser: This is the teaser
 image: /assets/project-images/Gallant Concrete, APC Construction 1.jpg
-service: electrical-and-instrumentational-construction
-layout: project
+service: electrical-instrumentation-construction
 ---
 
 # Mollis Pellentesque Lorem

@@ -3,7 +3,6 @@ name: Gulf International Waterway
 teaser: This is the teaser
 image: /assets/project-images/IMG_1888.JPG
 service: heavy-civil-construction
-layout: project
 ---
 
 # Mollis Pellentesque Lorem

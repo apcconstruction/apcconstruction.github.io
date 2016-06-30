@@ -3,7 +3,6 @@ name: Gulf International Waterway
 teaser: This is the teaser
 image: /assets/project-images/Dupont 02.jpg
 service: vertical-construction
-layout: project
 ---
 
 # Mollis Pellentesque Lorem

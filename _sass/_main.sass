@@ -4,6 +4,7 @@
 
 body
   font-family: 'Oxygen', sans-serif
+  transition: opacity .3s
 
 a#scroll-to-top
   position: fixed
@@ -25,6 +26,7 @@ section.header
   left: 0
   z-index: 100
   width: 100%
+  transition: background-color 0.2s
   .scrolled &, .menu-open &
     background-color: rgba($black, 0.9)
 
@@ -127,11 +129,12 @@ section.header
 section.hero
   position: relative
   background-size: cover
-
+  background-color: $dark-gray
   +mobile
     video.background
       display: none
   +gte-tablet
+    min-height: 600px
     img.background
       display: none
 
@@ -147,7 +150,6 @@ section.hero
     z-index: 0
     object-fit: cover
     overflow: hidden
-    -webkit-filter: blur(10px)
 
   .content-container
     position: absolute

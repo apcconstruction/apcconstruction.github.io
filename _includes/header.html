@@ -37,6 +37,7 @@
 			} else {
 				$('body').removeClass('scrolled')
 			}
+			$('body').css({ opacity: 1 })
 		}
 		topClass()
 		$(window).scroll($.throttle(200, topClass))

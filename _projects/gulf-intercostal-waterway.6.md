@@ -2,8 +2,7 @@
 name: Gulf International Waterway
 teaser: This is the teaser
 image: /assets/project-images/IMG_0709.JPG
-service: electrical-and-instrumentational-construction
-layout: project
+service: electrical-instrumentation-construction
 ---
 
 # Mollis Pellentesque Lorem

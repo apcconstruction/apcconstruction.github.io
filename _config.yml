@@ -21,10 +21,21 @@ github_username:  brianberlin
 # Build settings
 markdown: kramdown
 
+defaults:
+  -
+    scope:
+      type: projects
+    values:
+      layout: secondary
+  -
+    scope:
+      type: services
+    values:
+      layout: secondary
+
 collections:
   projects:
     output: true
-    permalink: /projects/:path
   services:
     output: true
 

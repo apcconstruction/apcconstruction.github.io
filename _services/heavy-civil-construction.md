@@ -1,8 +1,8 @@
 ---
-name: Gulf International Waterway
-teaser: This is the teaser
-image: /assets/project-images/IMG_0123.JPG
-service: heavy-civil-construction
+name: Heavy Civil Construction
+teaser: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+icon: crane
+image: /assets/project-images/workers-4.jpg
 ---
 
 # Mollis Pellentesque Lorem

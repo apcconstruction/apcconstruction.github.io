@@ -4,13 +4,13 @@
     <div class="container">
       <a data-filter="all">All</a>
       {% for service in site.services %}
-        <a data-filter="{{ service.slug }}">{{ service.name }}</a>
+        <a data-filter="{{ service.name | slugify }}">{{ service.name }}</a>
       {% endfor %}
     </div>
   </div>
   <div class="items">
     {% for project in site.projects %}
-      <a href="{{ project.url }}.html" class="project item" data-service="{{ project.service }}">
+      <a href="{{ project.url }}" class="project item" data-service="{{ project.service }}">
         <div class="background" style="background-image: url('{{ project.image }}')"></div>
         <div class="content">
           <h3>{{ project.name }}</h3>
