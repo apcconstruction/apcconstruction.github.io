@@ -32,15 +32,15 @@
 		})
 
 		var topClass = function () {
-			if ($(document).scrollTop() > 10) {
+			if ($(document).scrollTop() > 0) {
 				$('body').addClass('scrolled')
 			} else {
 				$('body').removeClass('scrolled')
 			}
 			$('body').css({ opacity: 1 })
 		}
-		topClass()
-		$(window).scroll($.throttle(200, topClass))
+		topClass() 
+		$(window).scroll(topClass)
 	}
 	document.addEventListener('DOMContentLoaded', header, false);
 </script>
