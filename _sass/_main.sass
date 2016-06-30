@@ -27,7 +27,6 @@ section.header
   z-index: 100
   width: 100%
   transition: background-color 0.2s
-  background-color: rgba($black, 0.3)
   .scrolled &, .menu-open &
     background-color: $dark-gray
 
@@ -221,7 +220,7 @@ section.hero
 section.services
   +gte-desktop
     display: flex
-  padding: 100px 0px
+  padding: 100px 0px (100px - 70px)
   max-width: 1150px
   margin: auto
   .service
