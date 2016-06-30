@@ -181,13 +181,14 @@ section.hero
     h1
       font-size: 46px
       text-transform: uppercase
-      margin-bottom: 5px
+      margin-bottom: 25px
       +mobile
         font-size: 24px
         font-size: 4.5vh
     p
       margin-top: 5px
       font-size: 24px
+      // color: $light-gray
       +mobile
         font-size: 14px
         font-size: 3vh
@@ -195,9 +196,9 @@ section.hero
         max-width: 50%
 
     ul.buttons
-      +gte-tablet
-        display: flex
+      display: flex
       padding: 0
+      margin-top: 20px
       li
         list-style: none
         margin-right: 20px
@@ -221,6 +222,8 @@ section.services
   +gte-desktop
     display: flex
   padding: 100px 0px (100px - 70px)
+  +mobile
+    padding: 70px 0 0
   max-width: 1150px
   margin: auto
   .service
@@ -242,15 +245,17 @@ section.projects
     background-color: darken($dark-gray, 5%)
     margin-bottom: 2px
     .container
-      padding: 20px 0px
+      padding: 5px 0px
       max-width: 1150px
       margin: auto
       display: flex
       justify-content: center
+        
+      +mobile
+        flex-wrap: wrap
       a
         +button('ghost', true)
-        margin-right: 10px
-
+        margin: 5px 10px 5px 0 
   .items
     +n-columns(300px,  2px, false, 5)
 
@@ -391,6 +396,8 @@ section.page-title
     z-index: 1
     margin-top: auto
     text-align: center
+    max-width: 800px
+    margin: 0 auto
   h1
     margin-top: 0
     margin-bottom: 30px
@@ -401,11 +408,11 @@ section.page-title
     margin: 10px
     font-weight: normal
 
-section.project-page
+section.secondary-page
   .content
-    max-width: 600px
+    padding: 90px 20px
+    max-width: 650px
     margin: 0 auto
-    padding: 90px 0
     h1
       font-size: 25px
       text-transform: uppercase

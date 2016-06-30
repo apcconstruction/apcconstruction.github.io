@@ -1,5 +1,6 @@
 ---
 name: Heavy Civil Construction
+subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
 icon: crane
 image: /assets/project-images/workers-4.jpg

@@ -1,5 +1,6 @@
 ---
 name: Gulf International Waterway
+subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
 image: /assets/project-images/original-crane-pipe-rack.jpg
 service: vertical-construction

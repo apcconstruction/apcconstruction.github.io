@@ -1,5 +1,6 @@
 ---
 name: Gulf International Waterway
+subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
 image: /assets/project-images/IMG_0123.JPG
 service: heavy-civil-construction

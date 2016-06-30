@@ -1,5 +1,6 @@
 ---
 name: Gulf International Waterway
+subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
 image: /assets/project-images/Dupont 02.jpg
 service: vertical-construction

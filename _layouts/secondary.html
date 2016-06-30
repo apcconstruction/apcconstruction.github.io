@@ -2,9 +2,9 @@
 layout: default
 ---
 
-<section class="project-page">
+{% include page-title.html heading=page.name subheading=page.subheading image=page.image %}
 
-  {% include page-title.html heading=page.name subheading=page.teaser image=page.image %}
+<section class="secondary-page">
 
   <div class="content">
     {{ page.content }}
