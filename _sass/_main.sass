@@ -373,8 +373,6 @@ section.footer
 
 
 section.page-title
-  background-position: center
-  background-size: cover
   min-height: 400px
   color: $white
   position: relative
@@ -382,6 +380,19 @@ section.page-title
   flex-direction: column
   justify-content: flex-end
   padding: 71px 20px 70px
+  overflow: hidden
+  .cover-image
+    background-position: center
+    background-size: cover
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: transform 15s ease
+    transform: scale(1.5)
+    &.start
+      transform: scale(1)
   .background
     content: ''
     position: absolute
