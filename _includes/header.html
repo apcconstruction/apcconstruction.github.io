@@ -9,7 +9,7 @@
 			<rect y="8" fill="#E0E0E0" width="40" height="3"/>
 			<rect y="16" fill="#E0E0E0" width="40" height="3"/>
 		</svg>
-		<ul>
+		<ul class="nav">
 			<li><a href="/about">About</a></li>
 			<li><a href="/#services">Services</a></li>
 			<li><a href="/#projects">Projects</a></li>
@@ -29,6 +29,10 @@
 			$(this).one(events, function () {
 				$(this).removeClass('animated').removeClass(animation)
 			})
+		})
+
+		$('.nav a').click(function () {
+			$('.menu-toggle').click()
 		})
 
 		var topClass = function () {
