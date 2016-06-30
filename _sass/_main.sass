@@ -19,7 +19,7 @@ a#scroll-to-top
   .scrolled &
     opacity: 1
 
-section#header
+section.header
   position: fixed
   top: 0
   left: 0
@@ -124,7 +124,7 @@ section#header
               background-color: rgba($black, 0.5)
               color: $orange
 
-section#hero
+section.hero
   position: relative
   background-size: cover
 
@@ -147,6 +147,7 @@ section#hero
     z-index: 0
     object-fit: cover
     overflow: hidden
+    -webkit-filter: blur(10px)
 
   .content-container
     position: absolute
@@ -205,7 +206,7 @@ section#hero
         +button('ghost')
 
 
-section#services
+section.services
   +gte-desktop
     display: flex
   padding: 100px 0px
@@ -225,7 +226,7 @@ section#services
       margin-top: 40px
 
 
-section#projects
+section.projects
   .filter
     background-color: $dark-gray
     margin-bottom: 2px
@@ -314,7 +315,7 @@ section#projects
       +mobile
         +active
 
-section#contact-form
+section.contact
   background-color: $light-gray
   padding: 80px 0
   .container
@@ -331,7 +332,7 @@ section#contact-form
     +wide-heading
 
 
-section#footer
+section.footer
   background-color: $dark-gray
   color: $light-gray
   font-size: 16px
@@ -355,8 +356,9 @@ section#footer
     width: 100%
 
 
-section#page-title
+section.page-title
   background-position: center
+  background-size: cover
   min-height: 400px
   color: $white
   position: relative
@@ -388,7 +390,7 @@ section#page-title
     margin: 10px
     font-weight: normal
 
-section#project-page
+section.project-page
   .content
     max-width: 600px
     margin: 0 auto

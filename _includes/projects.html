@@ -1,4 +1,4 @@
-<section id="projects" class="items">
+<section id="projects" class="projects">
   <div style="height: 72px"></div>
   <div class="filter">
     <div class="container">
@@ -22,3 +22,31 @@
     {% endfor %}
   </div>
 </section>
+
+
+<script type="text/javascript">
+  var projects = function () {
+    // add and remove project animation classes
+    $('section.projects svg').addClass('animated').addClass('rotateOut')
+    $('section.projects a').hover(function () {
+      $(this).find('svg').removeClass('rotateOut').addClass('rotateIn')
+    }, function () {
+      $(this).find('svg').removeClass('rotateIn').addClass('rotateOut')
+    })
+
+    // project filters
+    $('section.projects .item').each(function () { $(this).addClass('show') })
+    $('[data-filter]').click(function () {
+      var filter = $(this).attr('data-filter')
+      $('[data-service]').each(function () { $(this).removeClass('show') })
+      if (filter === 'all') {
+        $('[data-service]').each(function () { $(this).addClass('show') })
+      } else {
+        $('[data-service=' + filter + ']').each(function () { $(this).addClass('show') })
+      }
+    })
+
+  }
+
+  document.addEventListener('DOMContentLoaded', projects, false);
+</script>

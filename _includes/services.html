@@ -1,4 +1,4 @@
-<section id="services">
+<section id="services" class="services">
   {% for service in site.services %}
     <div class="service">
       <img src="/assets/icons/{{ service.icon }}.svg">
@@ -8,3 +8,37 @@
     </div>
   {% endfor %}
 </section>
+
+<script>
+  var setHeights = function () {
+    var heights = { h3: 0, p: 0, img: 0 }
+    $('section.services h3').height('inherit')
+    $('section.services p').height('inherit')
+    $('section.services img').height('inherit')
+    $('section.services .service').each(function () {
+      var h3 = $(this).find('h3').height()
+      var p = $(this).find('p').height()
+      var img = $(this).find('img').height()
+      if (heights.p < p) heights.p = p
+      if (heights.h3 < h3) heights.h3 = h3
+      if (heights.img < img) heights.img = img
+    })
+    $('section.services h3').height(heights.h3)
+    $('section.services p').height(heights.p)
+    $('section.services img').height(heights.img)
+  }
+
+  var services = function () {
+    // equal heights for service teasers
+    setHeights()
+    var windowWidth = $(window).width()
+    $(window).resize(function () {
+      if ($(window).width() !== windowWidth) {
+        windowWidth = $(window).width()
+        setHeights()
+      }
+    })
+  }
+
+  document.addEventListener('DOMContentLoaded', services, false);
+</script>

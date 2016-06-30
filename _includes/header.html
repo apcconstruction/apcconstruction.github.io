@@ -1,4 +1,4 @@
-<section id="header">
+<section class="header">
 	<div class="container">
 		<a href="/" class="logo">{% include logo.svg %}</a>
 		<svg class="menu-toggle" version="1.1"
@@ -14,7 +14,32 @@
 			<li><a href="/#services">Services</a></li>
 			<li><a href="/#projects">Projects</a></li>
 			<li><a href="/safety">Safety</a></li>
-			<li class="last"><a href="/contact">Contact</a></li>
+			<li class="last"><a href="/#contact">Contact</a></li>
 		</ul>
 	</div>
 </section>
+
+<script>
+	var header = function () {
+		var animation = 'rubberBand'
+		$('.menu-toggle').click(function () {
+			$(this).addClass('animated').addClass(animation)
+			$('body').toggleClass('menu-open')
+			var events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
+			$(this).one(events, function () {
+				$(this).removeClass('animated').removeClass(animation)
+			})
+		})
+
+		var topClass = function () {
+			if ($(document).scrollTop() > 10) {
+				$('body').addClass('scrolled')
+			} else {
+				$('body').removeClass('scrolled')
+			}
+		}
+		topClass()
+		$(window).scroll($.throttle(200, topClass))
+	}
+	document.addEventListener('DOMContentLoaded', header, false);
+</script>
