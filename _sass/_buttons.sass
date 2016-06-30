@@ -11,12 +11,13 @@
   display: inline-block
   transition: background-color 0.2s, color 0.2s, border 0.2s
   &:hover
-    background-color: $smoke-white
-    color: $orange
-    border: 2px solid $white
+    background-color: $light-gray
+    color: $dark-gray
+    border: 2px solid $light-gray
   @if $type == 'ghost'
     background-color: transparent
-    border: 2px solid $white
+    border: 2px solid $light-gray
+    color: $light-gray
     &:hover
       background-color: transparent
       color: $orange
