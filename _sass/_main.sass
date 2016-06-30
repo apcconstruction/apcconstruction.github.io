@@ -207,6 +207,15 @@ section.hero
         +button
       li:last-child a
         +button('ghost')
+  
+  .isnworld
+    width: 300px
+    margin-left: 20px
+    +mobile
+      display: none
+    svg
+      width: 100%
+      height: auto
 
 
 section.services
@@ -231,7 +240,7 @@ section.services
 
 section.projects
   .filter
-    background-color: $dark-gray
+    background-color: darken($dark-gray, 5%)
     margin-bottom: 2px
     .container
       padding: 20px 0px
