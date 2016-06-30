@@ -1,7 +1,15 @@
+<section id="project-filter">
+  <div class="container">
+    <a data-filter="all">All</a>
+    {% for service in site.services %}
+      <a data-filter="{{ service.slug }}">{{ service.name }}</a>
+    {% endfor %}
+  </div>
+</section>
 <section id="projects" class="items">
   {% for project in site.projects %}
-    <a href="/project/{{ project.slug }}" class="project item">
-      <div class="background" style="background-image: url('/assets/project-images/{{ project.image }}')"></div>
+    <a href="{{ project.url }}.html" class="project item" data-service="{{ project.service }}">
+      <div class="background" style="background-image: url('{{ project.image }}')"></div>
       <div class="content">
         <h3>{{ project.name }}</h3>
         <i></i>

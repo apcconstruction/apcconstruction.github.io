@@ -1,5 +1,0 @@
----
-name: Gulf International Waterway
-teaser: This is the teaser
-image: IMG_1888.JPG
----

@@ -128,14 +128,12 @@ section#hero
   position: relative
   background-size: cover
 
-  video.background
-    // display: none
-    +gte-tablet
-      display: block
-  img.background
-    display: none
-    +mobile
-      display: block
+  +mobile
+    video.background
+      display: none
+  +gte-tablet
+    img.background
+      display: none
 
       
   .background
@@ -148,6 +146,7 @@ section#hero
     background-color: rgba($black, 0.4)
     z-index: 0
     object-fit: cover
+    overflow: hidden
 
   .content-container
     position: absolute
@@ -226,12 +225,29 @@ section#services
       margin-top: 40px
 
 
+section#project-filter
+  background-color: $dark-gray
+  margin-bottom: 2px
+  .container
+    padding: 20px 0px
+    max-width: 1150px
+    margin: auto
+    display: flex
+    justify-content: center
+    a
+      +button('ghost', true)
+      margin-right: 10px
+
 section#projects
   +n-columns(300px,  2px, false, 5)
 
   .item
     position: relative
     overflow: hidden
+    display: none
+    &.show
+      display: block
+
   .content
     position: relative
     z-index: 2
@@ -281,7 +297,8 @@ section#projects
     .background:after
       transition: background-color 0.2s
       background-color: rgba($black, 0.2)
-    &:hover
+      
+    =active
       .content
         opacity: 1
         i
@@ -291,6 +308,10 @@ section#projects
         transform: scale(1.1)
       .background:after
         background-color: rgba($black, 0.7)
+    &:hover
+      +active
+    +mobile
+      +active
 
 section#contact-form
   background-color: $light-gray
@@ -331,3 +352,52 @@ section#footer
 
   img
     width: 100%
+
+
+section#page-title
+  background-position: center
+  min-height: 400px
+  color: $white
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  padding: 71px 20px 70px
+  .background
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.5)
+    z-index: 0
+  .content
+    position: relative
+    z-index: 1
+    margin-top: auto
+    text-align: center
+  h1
+    margin-top: 0
+    margin-bottom: 30px
+    font-size: 46px
+    text-transform: uppercase
+  h2
+    font-size: 21px
+    margin: 10px
+    font-weight: normal
+
+section#project-page
+  .content
+    max-width: 600px
+    margin: 0 auto
+    padding: 90px 0
+    h1
+      font-size: 25px
+      text-transform: uppercase
+      letter-spacing: 6px
+    p
+      margin: 20px 0
+      font-size: 18px
+      line-height: 28px
+      color: $gray

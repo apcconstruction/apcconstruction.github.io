@@ -1,4 +1,4 @@
-=button($type: '')
+=button($type: '', $small: false)
   background-color: $orange
   font-size: 20px
   font-weight: bold
@@ -22,3 +22,7 @@
       background-color: transparent
       color: $orange
       border: 2px solid $orange
+  
+  @if $small
+    font-size: 12px
+    padding: 10px 20px

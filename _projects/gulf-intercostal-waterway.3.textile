@@ -1,5 +1,0 @@
----
-name: Gulf International Waterway
-teaser: This is the teaser
-image: Gallant Concrete, APC Construction 1.jpg
----

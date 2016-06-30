@@ -69,11 +69,11 @@ $(document).ready(function () {
     $('section#services img').height(heights.img)
   }
   setHeights()
-  $(window).resize(function () { 
-    if ($(window).width() != windowWidth) {
-      windowWidth = $(window).width();
+  $(window).resize(function () {
+    if ($(window).width() !== windowWidth) {
+      windowWidth = $(window).width()
       setHeights()
-    } 
+    }
   })
 
   // menu toggle
@@ -84,13 +84,23 @@ $(document).ready(function () {
     var events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
     $(this).one(events, function () {
       $(this).removeClass('animated').removeClass(animation)
-    });
+    })
   })
-  
+
   // scoll to top
   $('#scroll-to-top').click(function () {
     $('html, body').animate({ scrollTop: 0 }, 1000)
   })
 
-
+  // project filters
+  $('section#projects .item').each(function () { $(this).addClass('show') })
+  $('[data-filter]').click(function () {
+    var filter = $(this).attr('data-filter')
+    $('[data-service]').each(function () { $(this).removeClass('show') })
+    if (filter === 'all') {
+      $('[data-service]').each(function () { $(this).addClass('show') })
+    } else {
+      $('[data-service=' + filter + ']').each(function () { $(this).addClass('show') })
+    }
+  })
 })

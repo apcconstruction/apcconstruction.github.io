@@ -1,5 +1,0 @@
----
-name: Gulf International Waterway
-teaser: This is the teaser
-image: original-crane-pipe-rack.jpg
----
