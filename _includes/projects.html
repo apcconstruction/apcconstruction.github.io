@@ -19,7 +19,7 @@
     {% for project in projects %}
       <a href="{{ project.url }}" class="project item" data-service="{{ project.service }}">
         <div class="background">
-          <div class="image"><img src="{{ project.image }}" data-src="{{ project.image }}" /></div>
+          <div class="image"><img data-original="{{ project.image }}" /></div>
         </div>
         <div class="content">
           <h3>{{ project.name }}</h3>
@@ -36,7 +36,7 @@
 <script type="text/javascript">
   var projects = function () {
 
-    $('section.projects .items img').unveil()
+    $('section.projects .items img').lazyload()
 
     // add and remove project animation classes
     $('section.projects svg').addClass('animated').addClass('rotateOut')
