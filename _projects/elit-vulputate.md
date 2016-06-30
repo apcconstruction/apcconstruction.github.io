@@ -1,9 +1,9 @@
 ---
-name: Gulf International Waterway
+name: Elit Vulputate
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/original-crane-pipe-rack.jpg
-service: vertical-construction
+image: /assets/project-images/IMG_0123.JPG
+service: heavy-civil-construction
 ---
 
 # Mollis Pellentesque Lorem

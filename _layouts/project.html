@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% include page-title.html heading=page.name subheading=page.subheading image=page.image %}
+
+<section class="project-page secondary-page">
+
+  <div class="content">
+    {{ page.content }}
+    <div class="next-project">
+      {% if page.next %}
+        <a href="{{ page.next.url }}">Next: {{ page.next.title }}</a>
+      {% else %}
+        <a href="{{ site.projects[0].url }}">Next: {{ site.projects[0].title }}</a>
+      {% endif %}
+    </div>
+  </div>
+
+</section>
+
+{% include contact.html %}

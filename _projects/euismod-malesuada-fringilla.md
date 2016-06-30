@@ -1,8 +1,8 @@
 ---
-name: Gulf International Waterway
+name: Euismod Malesuada Fringilla
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/IMG_0709.JPG
+image: /assets/project-images/syngenta-aerial-925.jpg
 service: electrical-instrumentation-construction
 ---
 

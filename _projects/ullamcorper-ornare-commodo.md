@@ -1,8 +1,8 @@
 ---
-name: Gulf International Waterway
+name: Ullamcorper Ornare Commodo
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/syngenta-aerial-925.jpg
+image: /assets/project-images/workers-4.jpg
 service: electrical-instrumentation-construction
 ---
 

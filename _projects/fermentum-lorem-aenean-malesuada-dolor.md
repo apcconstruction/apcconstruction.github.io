@@ -1,9 +1,9 @@
 ---
-name: Gulf International Waterway
+name: Fermentum Lorem Aenean Malesuada Dolor
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/6.JPG
-service: heavy-civil-construction
+image: /assets/project-images/IMG_0629.JPG
+service: vertical-construction
 ---
 
 # Mollis Pellentesque Lorem

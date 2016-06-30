@@ -1,9 +1,9 @@
 ---
-name: Gulf International Waterway
+name: Etiam Ridiculus Vestibulum
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/Dupont 02.jpg
-service: vertical-construction
+image: /assets/project-images/IMG_0709.JPG
+service: electrical-instrumentation-construction
 ---
 
 # Mollis Pellentesque Lorem

@@ -1,9 +1,9 @@
 ---
-name: Gulf International Waterway
+name: Mattis Lorem Elit
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/workers-4.jpg
-service: electrical-instrumentation-construction
+image: /assets/project-images/original-crane-pipe-rack.jpg
+service: vertical-construction
 ---
 
 # Mollis Pellentesque Lorem

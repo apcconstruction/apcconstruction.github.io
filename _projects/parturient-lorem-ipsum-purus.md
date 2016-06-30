@@ -1,9 +1,9 @@
 ---
-name: Gulf International Waterway
+name: Parturient Lorem Ipsum Purus
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/Gallant Concrete, APC Construction 1.jpg
-service: electrical-instrumentation-construction
+image: /assets/project-images/IMG_1888.JPG
+service: heavy-civil-construction
 ---
 
 # Mollis Pellentesque Lorem

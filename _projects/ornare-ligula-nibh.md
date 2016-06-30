@@ -1,8 +1,8 @@
 ---
-name: Gulf International Waterway
+name: Ornare Ligula Nibh
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/IMG_0629.JPG
+image: /assets/project-images/Dupont 02.jpg
 service: vertical-construction
 ---
 

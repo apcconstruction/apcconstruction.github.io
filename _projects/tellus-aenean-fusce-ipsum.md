@@ -1,8 +1,8 @@
 ---
-name: Gulf International Waterway
+name: Tellus Aenean Fusce Ipsum
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/IMG_1888.JPG
+image: /assets/project-images/6.JPG
 service: heavy-civil-construction
 ---
 

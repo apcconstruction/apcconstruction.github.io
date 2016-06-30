@@ -1,9 +1,9 @@
 ---
-name: Gulf International Waterway
+name: Etiam Adipiscing Amet Condimentum
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
 teaser: This is the teaser
-image: /assets/project-images/IMG_0123.JPG
-service: heavy-civil-construction
+image: /assets/project-images/Gallant Concrete, APC Construction 1.jpg
+service: electrical-instrumentation-construction
 ---
 
 # Mollis Pellentesque Lorem
