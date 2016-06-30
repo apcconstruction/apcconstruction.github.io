@@ -132,13 +132,8 @@ section.hero
   background-color: $dark-gray
   transition: height 1s
   height: 800px
-  +mobile
-    video.background
-      display: none
   +gte-tablet
     min-height: 600px
-    img.background
-      display: none
   overflow: hidden
       
   .background
@@ -151,7 +146,7 @@ section.hero
     z-index: 0
     object-fit: cover
     overflow: hidden
-    -webkit-filter: blur(5px)
+    -webkit-filter: blur(2px)
 
   .content-container
     position: absolute
@@ -267,7 +262,7 @@ section.projects
     .item
       position: relative
       overflow: hidden
-      transition: -webkit-filter 0.5s, -moz-filter 0.5s, -ms-filter 0.5s
+      transition: -webkit-filter 0.5s, -moz-filter 0.5s, -ms-filter 0.5s, order 0.2s
       -webkit-filter: brightness(0.3) grayscale(100%)
       -moz-filter: brightness(0.3) grayscale(100%)
       -ms-filter: brightness(0.3) grayscale(100%)

@@ -1,7 +1,7 @@
 <section id="services" class="services">
   {% for service in site.services %}
     <div class="service">
-      <object data="assets/icons/{{ service.icon }}.svg" type="image/svg+xml"></object>
+      <object data="/assets/icons/{{ service.icon }}.svg" type="image/svg+xml"></object>
       <h3>{{ service.name }}</h3>
       <p>{{ service.teaser }}</p>
       <a href="{{ service.url }}">Read More</a>
