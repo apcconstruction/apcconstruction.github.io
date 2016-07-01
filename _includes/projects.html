@@ -19,7 +19,7 @@
     {% for project in projects %}
       <a href="{{ project.url }}" class="project item" data-service="{{ project.service }}">
         <div class="background">
-          <div class="image"><img data-original="{{ project.image }}" /></div>
+          <div class="image"><img src="{{ project.image | resize:20,20 }}" data-original="{{ project.image | resize:600,600 }}" /></div>
         </div>
         <div class="content">
           <h3>{{ project.name }}</h3>

@@ -17,6 +17,8 @@ GEM
       mercenary (~> 0.3.3)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-image_resizer (0.0.1)
+      mini_magick
     jekyll-livereload (0.2.1)
       em-websocket (~> 0.5)
       jekyll (~> 3.0)
@@ -30,6 +32,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    mini_magick (4.5.1)
     rb-fsevent (0.9.4)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -41,5 +44,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  jekyll-image_resizer
   jekyll-livereload
   rb-fsevent (<= 0.9.4)
