@@ -2,9 +2,9 @@
   "name": "apcconstruction.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "deploy": "git add .; git commit -m '...'; git push origin master"
+    "start": "jekyll serve",
+    "deploy": "aws s3 sync ./_site/ s3://apcconstruction/ --acl public-read"
   },
   "repository": {
     "type": "git",

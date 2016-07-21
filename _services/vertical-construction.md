@@ -1,8 +1,7 @@
 ---
 name: Vertical Construction
-subheading: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. 
+subheading: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
 teaser: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-icon: buildings
 image: /assets/project-images/workers-4.jpg
 ---
 

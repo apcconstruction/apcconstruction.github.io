@@ -18,33 +18,3 @@
 		</ul>
 	</div>
 </section>
-
-<script>
-	var header = function () {
-		var animation = 'rubberBand'
-		$('.menu-toggle').click(function () {
-			$(this).addClass('animated').addClass(animation)
-			$('body').toggleClass('menu-open')
-			var events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
-			$(this).one(events, function () {
-				$(this).removeClass('animated').removeClass(animation)
-			})
-		})
-
-		$('.nav a').click(function () {
-			$('.menu-toggle').click()
-		})
-
-		var topClass = function () {
-			if ($(document).scrollTop() > 0) {
-				$('body').addClass('scrolled')
-			} else {
-				$('body').removeClass('scrolled')
-			}
-			$('body').css({ opacity: 1 })
-		}
-		topClass() 
-		$(window).scroll(topClass)
-	}
-	document.addEventListener('DOMContentLoaded', header, false);
-</script>

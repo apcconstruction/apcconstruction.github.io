@@ -1,7 +1,7 @@
 ---
 name: Elit Vulputate
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
-teaser: This is the teaser
+teaser: Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.
 image: /assets/project-images/IMG_0123.JPG
 service: heavy-civil-construction
 ---

@@ -1,11 +1,12 @@
 <section class="hero">
-  <img src="/assets/gradient.jpg" class="background" />
+  <video autoplay loop class="background" src="/assets/video/cover2.mp4"></video>
+  <img src="/assets/project-images/workers-4.jpg" class="background" />
   <div class="content-container">
     <div class="content">
       <h1>APC Construction</h1>
       <p>
-        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a 
-        pharetra augue. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac 
+        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a
+        pharetra augue. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac
         facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Sed posuere
         consectetur est at lobortis.
       </p>
@@ -33,34 +34,3 @@
     </div>
   </div>
 </section>
-
-
-<script type="text/javascript">
-  var hero = function () {
-    if ($('section.hero').length) {
-      // sets height of hero image
-      var windowWidth = $(window).width();
-      $('section.hero').height(window.innerHeight)
-      $(window).resize($.throttle(200, function () {
-        if ($(window).width() != windowWidth) {
-          windowWidth = $(window).width();
-          $('section.hero').height(window.innerHeight)
-        }
-      }))
-
-      // hero animations
-      $('section.hero h1, section.hero p, section.hero .buttons').css({ opacity: 0 })
-      $('section.hero h1').addClass('animated').addClass('fadeInUp')
-      setTimeout(function () { $('section.hero p').addClass('animated').addClass('fadeInUp') }, 500)
-      setTimeout(function () { $('section.hero .buttons').addClass('animated').addClass('fadeInUp') }, 1000)
-      setTimeout(function () { $('section.hero .isnworld').addClass('animated').addClass('slideInLeft').removeClass('hide') }, 1500)
-
-      // arrow click scroll
-      $('section.hero .arrow').click(function () {
-        $('html, body').animate({ scrollTop: $('#services').offset().top - 70 }, 1000)
-      })
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', hero, false);
-</script>

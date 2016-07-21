@@ -8,11 +8,12 @@ layout: default
 
   <div class="content">
     {{ page.content }}
-    <div class="next-project">
+    <div class="pager">
+      {% if page.previous %}
+        <a class="next" href="{{ page.previous.url }}">Previous</a>
+      {% endif %}
       {% if page.next %}
-        <a href="{{ page.next.url }}">Next: {{ page.next.title }}</a>
-      {% else %}
-        <a href="{{ site.projects[0].url }}">Next: {{ site.projects[0].title }}</a>
+        <a class="previous" href="{{ page.next.url }}">Next</a>
       {% endif %}
     </div>
   </div>

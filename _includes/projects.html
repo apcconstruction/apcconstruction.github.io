@@ -1,11 +1,15 @@
 <section id="projects" class="projects">
-  <div style="height: 71px"></div>
+  {% if include.title != null %}
+    <div class="title">
+      <h3>{{ include.title }}</h3>
+    </div>
+  {% endif %}
   {% if include.service == null %}
     <div class="filter">
       <div class="container">
-        <a data-filter="all">All</a>
+        <a href="#" class="active" data-filter="all">All</a>
         {% for service in site.services %}
-          <a data-filter="{{ service.name | slugify }}">{{ service.name }}</a>
+          <a href="#" data-filter="{{ service.name | slugify }}">{{ service.name }}</a>
         {% endfor %}
       </div>
     </div>
@@ -31,34 +35,3 @@
     {% endfor %}
   </div>
 </section>
-
-
-<script type="text/javascript">
-  var projects = function () {
-
-    $('section.projects .items img').lazyload()
-
-    // add and remove project animation classes
-    $('section.projects svg').addClass('animated').addClass('rotateOut')
-    $('section.projects a').hover(function () {
-      $(this).find('svg').removeClass('rotateOut').addClass('rotateIn')
-    }, function () {
-      $(this).find('svg').removeClass('rotateIn').addClass('rotateOut')
-    })
-
-    // project filters
-    $('section.projects .item').each(function () { $(this).addClass('show') })
-    $('[data-filter]').click(function () {
-      var filter = $(this).attr('data-filter')
-      $('[data-service]').each(function () { $(this).removeClass('show') })
-      if (filter === 'all') {
-        $('[data-service]').each(function () { $(this).addClass('show') })
-      } else {
-        $('[data-service=' + filter + ']').each(function () { $(this).addClass('show') })
-      }
-    })
-
-  }
-
-  document.addEventListener('DOMContentLoaded', projects, false);
-</script>

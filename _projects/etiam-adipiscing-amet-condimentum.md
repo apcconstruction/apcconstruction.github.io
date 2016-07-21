@@ -1,7 +1,7 @@
 ---
 name: Etiam Adipiscing Amet Condimentum
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
-teaser: This is the teaser
+teaser: Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.
 image: /assets/project-images/Gallant Concrete, APC Construction 1.jpg
 service: electrical-instrumentation-construction
 ---

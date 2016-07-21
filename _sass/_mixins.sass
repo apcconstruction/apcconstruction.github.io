@@ -1,0 +1,83 @@
+=button-normal
+  font-size: 20px
+  font-weight: bold
+  text-decoration: none
+  text-transform: uppercase
+  padding: 20px 40px
+  padding: 2vh 4vw
+  display: inline-block
+  border: none
+=button-small
+  font-size: 12px
+  padding: 10px 20px
+  font-weight: bold
+  text-decoration: none
+  text-transform: uppercase
+  display: inline-block
+
+=button-ghost
+  background-color: transparent
+  border: 2px solid $white
+  color: $white
+  margin: -2px
+  transition: background-color 0.2s, color 0.2s, border 0.2s
+  &:hover
+    color: $green
+    border: 2px solid $green
+
+=button-solid($out: $orange, $in: $green, $text-out: $white, $text-in: $white)
+  color: $text-out
+  position: relative
+  overflow: hidden
+  background: linear-gradient(45deg, $in 50%, $out 51%)
+  transition: background-position-x 0.7s, background-size 0.7s, color 0.3s
+  background-position-x: 100%
+  background-size: 220%
+  text-shadow: 0 0 15px rgba(0,0,0,0.5)
+  &:hover, &.active
+    background-position-x: 0%
+    background-size: 500%
+    color: $text-in
+
+=button-solid-dark
+  +button-solid($dark-gray, $orange, $white, $white)
+
+=side-border
+  border-left: 2px solid $green
+  position: relative
+  &:before
+    content: ' '
+    border-top: 2px solid $green
+    width: 20px
+    position: absolute
+  &:after
+    content: ' '
+    border-bottom: 2px solid $green
+    width: 20px
+    position: absolute
+    left: 0
+    bottom: 0
+
+
+=n-columns($min-width, $gutter, $last-equal: false, $max-cols: 5)
+  display: flex
+  flex-wrap: wrap
+  margin-left: -$gutter
+  margin-top: -$gutter
+
+  .item
+    display: block
+    flex: 1 0 $min-width
+    margin-left: $gutter
+    margin-top: $gutter
+    justify-content: center
+    @if $last-equal
+      @for $i from 2 through $max-cols
+        $screen-width: ($min-width*$i)+($gutter*$i)
+        $column-width: (100%/$i)
+        @media (min-width: $screen-width)
+          max-width: calc(#{$column-width} - #{$gutter})
+
+      $column-width: (100%/$max-cols)
+      @media (min-width: $min-width*$max-cols)
+        min-width: calc(#{$column-width} - #{$gutter})

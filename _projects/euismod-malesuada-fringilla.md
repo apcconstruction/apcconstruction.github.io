@@ -1,7 +1,7 @@
 ---
-name: Euismod Malesuada Fringilla
+name: Adipiscing Ridiculus Pharetra Inceptos Parturient Ipsum
 subheading: Maecenas sed diam eget risus varius blandit sit amet non magna.
-teaser: This is the teaser
+teaser: Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 image: /assets/project-images/syngenta-aerial-925.jpg
 service: electrical-instrumentation-construction
 ---
